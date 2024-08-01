@@ -1,16 +1,22 @@
 // Inicializar AOS
-AOS.init();
+AOS.init({
+    duration: 1200,
+    once: true
+});
 
 // Navegación suave
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 70
-    }, 500);
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
 // Validación de formulario
-$('form').on('submit', function (e) {
+document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
     alert('Mensaje enviado correctamente.');
 });
