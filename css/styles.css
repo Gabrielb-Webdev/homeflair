@@ -8,15 +8,27 @@ body {
 .navbar {
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* Hero Section con Efecto Parallax */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .hero {
     background: url('https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
     height: 100vh;
     position: relative;
     overflow: hidden;
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 100px;
 }
 
 .hero:after {
@@ -37,7 +49,7 @@ body {
 
 /* Secciones */
 section {
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 #services .icon i {
@@ -54,6 +66,7 @@ section {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item img {
@@ -89,10 +102,16 @@ section {
 
 /* Testimonios */
 .testimonial {
-    background: #f9f9f9;
+    background: #fff;
     padding: 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial p {
@@ -105,6 +124,12 @@ section {
     margin-top: 15px;
     font-weight: bold;
     color: #333;
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
 }
 
 /* Formulario de contacto */
@@ -140,6 +165,10 @@ footer {
 
     #services .icon i {
         font-size: 2.5rem;
+    }
+
+    .hero {
+        padding-top: 120px;
     }
 }
 

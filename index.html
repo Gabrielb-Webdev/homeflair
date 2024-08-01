@@ -21,7 +21,7 @@
 
 <body>
     <!-- Encabezado -->
-    <header class="bg-white shadow-sm">
+    <header class="bg-white shadow-sm fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light container">
             <a class="navbar-brand font-weight-bold" href="#">HomeFlair</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -62,9 +62,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
                     <h2 class="font-weight-bold mb-4">Sobre Nosotros</h2>
-                    <p class="text-muted">En HomeFlair, nos especializamos en transformar tus ideas en realidad. Nuestro
-                        equipo de expertos en diseño de interiores está dedicado a crear espacios que reflejen tu estilo
-                        y necesidades.</p>
+                    <p class="text-muted">En HomeFlair, nos especializamos en transformar tus ideas en realidad. Nuestro equipo de expertos en diseño de interiores está dedicado a crear espacios que reflejen tu estilo y necesidades.</p>
+                    <p class="text-muted">Con más de 20 años de experiencia, hemos ayudado a miles de clientes a mejorar sus hogares, utilizando las últimas tendencias en diseño y materiales de la mejor calidad.</p>
                 </div>
             </div>
         </div>
@@ -107,8 +106,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="portfolio-item">
-                        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                            alt="Proyecto 1" class="img-fluid">
+                        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 1" class="img-fluid">
                         <div class="overlay">
                             <div class="text">Proyecto de Sala de Estar Moderna</div>
                         </div>
@@ -116,8 +114,7 @@
                 </div>
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="portfolio-item">
-                        <img src="https://images.pexels.com/photos/373548/pexels-photo-373548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                            alt="Proyecto 2" class="img-fluid">
+                        <img src="https://images.pexels.com/photos/373548/pexels-photo-373548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 2" class="img-fluid">
                         <div class="overlay">
                             <div class="text">Remodelación de Cocina Elegante</div>
                         </div>
@@ -125,41 +122,49 @@
                 </div>
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
                     <div class="portfolio-item">
-                        <img src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                            alt="Proyecto 3" class="img-fluid">
+                        <img src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 3" class="img-fluid">
                         <div class="overlay">
                             <div class="text">Diseño de Dormitorio Acogedor</div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="text-center mt-4">
+                <a href="#contact" class="btn btn-primary">Ver Más Proyectos</a>
+            </div>
         </div>
     </section>
 
     <!-- Testimonios -->
-    <section id="testimonials" class="py-5 bg-dark text-white">
+    <section id="testimonials" class="py-5">
         <div class="container">
             <h2 class="font-weight-bold text-center mb-4">Testimonios</h2>
             <div class="row text-center">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial">
-                        <p>"HomeFlair transformó mi sala de estar en un lugar mágico. Estoy encantado con el
-                            resultado."</p>
-                        <h5>- Juan Pérez</h5>
+                    <div class="testimonial bg-white p-4 shadow rounded">
+                        <p class="mb-4">"HomeFlair transformó mi sala de estar en un lugar mágico. Estoy encantado con el resultado."</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="https://via.placeholder.com/60" alt="Cliente" class="rounded-circle mr-3">
+                            <h5 class="mb-0">Juan Pérez</h5>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial">
-                        <p>"La remodelación de mi cocina fue increíble. El equipo de HomeFlair superó mis
-                            expectativas."</p>
-                        <h5>- María Gómez</h5>
+                    <div class="testimonial bg-white p-4 shadow rounded">
+                        <p class="mb-4">"La remodelación de mi cocina fue increíble. El equipo de HomeFlair superó mis expectativas."</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="https://via.placeholder.com/60" alt="Cliente" class="rounded-circle mr-3">
+                            <h5 class="mb-0">María Gómez</h5>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial">
-                        <p>"Gracias a HomeFlair, ahora tengo el dormitorio de mis sueños. Totalmente recomendado."
-                        </p>
-                        <h5>- Luis Fernández</h5>
+                    <div class="testimonial bg-white p-4 shadow rounded">
+                        <p class="mb-4">"Gracias a HomeFlair, ahora tengo el dormitorio de mis sueños. Totalmente recomendado."</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="https://via.placeholder.com/60" alt="Cliente" class="rounded-circle mr-3">
+                            <h5 class="mb-0">Luis Fernández</h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -182,8 +187,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Tu Mensaje"
-                                required></textarea>
+                            <textarea class="form-control" name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-dark btn-block">Enviar Mensaje</button>
                     </form>
