@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeFlair - Tu Estilo de Hogar Perfecto</title>
+    <title>HomeFlair - Diseño de Interiores</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -13,6 +13,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <!-- AOS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Mo.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core@1.0.0-beta.1/dist/mo.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
@@ -20,39 +24,53 @@
 </head>
 
 <body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <!-- Encabezado -->
     <header class="bg-white shadow-sm fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-            <a class="navbar-brand font-weight-bold" href="#">HomeFlair</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portafolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand font-weight-bold" href="#">HomeFlair</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- Sección Hero -->
     <section class="hero d-flex align-items-center justify-content-center text-center parallax">
+        <div id="particles-js"></div>
         <div class="container">
-            <h1 class="display-4 text-white animate__animated animate__fadeInDown">Transforma Tu Espacio de Vida</h1>
+            <h1 class="display-4 text-white animate__animated animate__fadeInDown" id="hero-title">Transforma Tu Espacio de Vida</h1>
             <p class="lead text-white mb-4 animate__animated animate__fadeInUp animate__delay-1s">Diseñamos ambientes únicos que reflejan tu estilo personal.</p>
-            <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">Contáctanos</a>
+            <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s" id="contact-btn">Contáctanos</a>
         </div>
     </section>
 
@@ -106,7 +124,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="portfolio-item">
-                        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 1" class="img-fluid">
+                        <img data-src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 1" class="img-fluid lazy">
                         <div class="overlay">
                             <div class="text">Proyecto de Sala de Estar Moderna</div>
                         </div>
@@ -114,7 +132,7 @@
                 </div>
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="portfolio-item">
-                        <img src="https://images.pexels.com/photos/373548/pexels-photo-373548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 2" class="img-fluid">
+                        <img data-src="https://images.pexels.com/photos/373548/pexels-photo-373548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 2" class="img-fluid lazy">
                         <div class="overlay">
                             <div class="text">Remodelación de Cocina Elegante</div>
                         </div>
@@ -122,7 +140,7 @@
                 </div>
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
                     <div class="portfolio-item">
-                        <img src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 3" class="img-fluid">
+                        <img data-src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Proyecto 3" class="img-fluid lazy">
                         <div class="overlay">
                             <div class="text">Diseño de Dormitorio Acogedor</div>
                         </div>
@@ -136,7 +154,7 @@
     </section>
 
     <!-- Testimonios -->
-    <section id="testimonials" class="py-5">
+    <section id="testimonials" class="py-5 bg-gradient">
         <div class="container">
             <h2 class="font-weight-bold text-center mb-4">Testimonios</h2>
             <div class="row text-center">
@@ -189,17 +207,18 @@
                         <div class="form-group">
                             <textarea class="form-control" name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-dark btn-block">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-dark btn-block" id="submit-btn">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pie de Página -->
+    <!-- Footer -->
     <footer class="py-4 bg-dark text-white">
         <div class="container text-center">
             <p>&copy; 2024 HomeFlair. Todos los derechos reservados.</p>
+            <p>Diseñado y desarrollado por <a href="https://pixiux.com" class="text-white font-weight-bold">Pixiu X</a></p>
         </div>
     </footer>
 
@@ -209,6 +228,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Lazy Load -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.3.0/lazyload.min.js"></script>
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
 </body>

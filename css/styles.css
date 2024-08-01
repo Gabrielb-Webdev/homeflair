@@ -3,12 +3,28 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
+    background: #f0f0f0;
 }
 
 .navbar {
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    background-color: #2b6777;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .navbar-brand img {
+    max-height: 50px;
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc33;
 }
 
 .fixed-top {
@@ -42,9 +58,105 @@ body {
     z-index: 1;
 }
 
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
 .hero .container {
     position: relative;
     z-index: 2;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .hero {
+        background-size: cover;
+        background-position: center top;
+        padding-top: 150px;
+        background-attachment: scroll;
+    }
+
+    .portfolio-item {
+        margin-bottom: 20px;
+    }
+
+    #services .icon i {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding-top: 120px;
+        background-position: center center;
+    }
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+#loader .spinner {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+#loader .spinner div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #2b6777;
+    border-radius: 50%;
+    animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #2b6777 transparent transparent transparent;
+}
+
+#loader .spinner div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+#loader .spinner div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+#loader .spinner div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Secciones */
@@ -101,6 +213,11 @@ section {
 }
 
 /* Testimonios */
+#testimonials {
+    background: linear-gradient(135deg, #f76c6c 0%, #ffcc33 100%);
+    color: #fff;
+}
+
 .testimonial {
     background: #fff;
     padding: 30px;
@@ -149,6 +266,18 @@ form button:hover {
     background-color: #333;
 }
 
+/* Botones */
+.btn-primary {
+    background-color: #f76c6c;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffcc33;
+    transform: translateY(-2px);
+}
+
 /* Pie de página */
 footer {
     background-color: #222;
@@ -157,27 +286,3 @@ footer {
     text-align: center;
 }
 
-/* Estilo responsive */
-@media (max-width: 768px) {
-    .portfolio-item {
-        margin-bottom: 20px;
-    }
-
-    #services .icon i {
-        font-size: 2.5rem;
-    }
-
-    .hero {
-        padding-top: 120px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-}
